@@ -3,11 +3,13 @@ const emoteToCount1 = 'roshteinsatchel';
 const emoteToCount2 = 'roshteingoldsatchel';
 const emoteToCount3 = 'roshteinClap';
 const emoteToCount4 = 'roshteinKEKR';
+const emoteToCount5 = 'roshteinYUCK';
 
 let previousCount1 = 0;
 let previousCount2 = 0;
 let previousCount3 = 0;
 let previousCount4 = 0;
+let previousCount5 = 0;
 
 // Function to count emotes and calculate differences
 const countEmotesAndCalculateDifference = (emoteToCount, previousCount) => {
@@ -75,14 +77,24 @@ const handleEmote4 = () => {
     clickEmoteIfThresholdMet('https://files.kick.com/emotes/18/fullsize', result.difference, emoteToCount4);
 };
 
+// Function to handle the counting and clicking logic for emote 5
+const handleEmote5 = () => {
+    const result = countEmotesAndCalculateDifference(emoteToCount5, previousCount5);
+    previousCount5 = result.count;
+
+    clickEmoteIfThresholdMet('https://files.kick.com/emotes/56/fullsize', result.difference, emoteToCount4);
+};
+
 // Initial counts
 handleEmote1();
 handleEmote2();
 handleEmote3();
 handleEmote4();
+handleEmote5();
 
 // Set intervals for continuous counting and processing
 setInterval(handleEmote1, 5000);
 setInterval(handleEmote2, 5000);
 setInterval(handleEmote3, 5000);
 setInterval(handleEmote4, 5000);
+setInterval(handleEmote5, 5000);
