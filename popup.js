@@ -1,6 +1,6 @@
 const setLiveStatus = "false";
 
-async function logStatus() {
+async function liveStatus() {
     const response = await fetch("https://kick.com/api/v2/channels/roshtein");
     var element = document.getElementById("isLive");
     const data = await response.json();
@@ -12,14 +12,13 @@ async function logStatus() {
         element.classList.add("offline");
     }
   }
-    
 chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     chrome.scripting.executeScript({
         target: { tabId: tabs[0].id },
-        func: logStatus
+        func: liveStatus
     });
 });
 
-
-setInterval(logStatus, 1000);
+liveStatus();
+setInterval(liveStatus, 100);
 
