@@ -1,7 +1,7 @@
 const setLiveStatus = "false";
 
 async function logStatus() {
-    const response = await fetch("https://kick.com/api/v2/channels/Ac7ionMan");
+    const response = await fetch("https://kick.com/api/v2/channels/roshtein");
     var element = document.getElementById("isLive");
     const data = await response.json();
     if (data.livestream != undefined) {
