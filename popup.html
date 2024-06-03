@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 500px; width: 400px;}
+.bgimg {
+  background-image: url('https://roshtein.com/_next/static/media/layout-background.742d4521.png');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.SideNavigation_wrapper__ZarGF .SideNavigation_header__ngSmZ .SideNavigation_headerImage__Vh70F {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.border-rosh-red {
+    --tw-border-opacity: 1;
+    border-color: rgb(255 82 99 / var(--tw-border-opacity));
+}
+
+.border-solid {
+    border-style: solid;
+}
+
+.border-2 {
+    border-width: 2px;
+}
+
+.rounded {
+    border-radius: .25rem;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.flex {
+    display: flex;
+}
+
+.relative {
+    position: relative;
+}
+
+.gap {
+    gap: 20px;
+}
+
+.py-1 {
+    padding: .1rem 1rem;
+}
+
+.btn-white {
+    color: #04041a;
+    background: #fafdff;
+    border: none;
+    box-shadow: 0 4px 16px rgba(4, 4, 26, .12);
+    transition: all .1s ease-out;
+}
+
+.btn-basic, .btn-medium {
+    padding: 10px 24px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    text-align: center;
+    outline: none;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all .1s ease-out;
+    font-family: Rubik, sans-serif;
+}
+
+.offline {
+    display: none;
+}
+
+.livetext {
+    font-weight: bolder;
+}
+
+.wrapperDefault {
+    border: 1px solid rgba(154, 169, 184, .64);
+    border-radius: 16px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding: 8px;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(4, 4, 26, .64);
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(4, 4, 26, .24);
+    gap: 8px;
+    top: 28%;
+    left: 5%;
+}
+
+.buttonChoice {
+    gap: 20px;
+    display: inline-flex;
+}
+
+.credits {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+    background: #070714;
+    border-top: 1px solid rgba(154, 169, 184, .16);
+    color: #9aa9bb;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    padding-top: 16px;
+    padding-bottom: max(16px, env(safe-area-inset-bottom));
+    bottom: 0;
+    position: absolute;
+}
+
+.credits a{
+    color: #fafdff;
+}
+
+.header{
+    background-color: #221f33;
+    width: 100%;
+}
+
+</style>
+</head>
+<body>
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  <div class="w3-display-topleft w3-padding-large w3-xlarge flex gap header">
+    <img src="https://roshtein.com/logo-roshtein-new.svg" width="110" height="40">
+    <div id="isLive" class="offline relative flex cursor-pointer rounded justify-center border-solid border-2 border-rosh-red SideNavigation_headerImage__Vh70F">
+        <a class="flex-center w-[31px] md:w-[35px] py-1 text-rosh-primary uppercase font-medium md:text-[10px] text-[8px] md:leading-3 tracking-wide livetext" href="https://kick.com/roshtein" target="_blank">Live</a></div>
+  </div>
+  <div class="wrapperDefault">
+    <img src="https://roshtein.com/logo-roshtein-new.svg" width="220" height="80">
+    <hr class="w3-border-grey" style="margin:auto;width:40%">
+    <p class="w3-large w3-center">Earn automatically Kick Coins</p>
+    <div class="buttonChoice">
+        <input class="btn-basic btn-white" type="button" id="button" value="ON">
+        <input class="btn-basic btn-white" type="button" id="button" value="OFF">
+    </div>
+  </div>
+  <div class="credits">
+    <span>©</span><a href="https://www.afonsopereira.com" target="_blank">Afonso Pereira</a>
+  </div>
+</div>
+<script src="popup.js"></script>
+</body>
+</html>

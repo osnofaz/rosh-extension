@@ -1,0 +1,39 @@
+{
+    "manifest_version": 3,
+    "name": "Roshtein's Farm Extension",
+    "version": "1.0",
+    "description": "Automatic Roshtein's Kick coin farmer",
+    "icons": {
+      "16": "icon.png",
+      "32": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icon.png",
+        "32": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+      }
+    },
+    "permissions": ["scripting", "activeTab"],
+    "commands": {
+      "_execute_action": {
+        "suggested_key": {
+          "default": "Ctrl+B",
+          "mac": "Command+B"
+        }
+      }
+    },
+    "content_scripts": [
+        {
+          "matches": ["https://kick.com/roshtein"],
+          "js": ["content.js"]
+        }
+      ]
+  }
