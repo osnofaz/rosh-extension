@@ -36,7 +36,7 @@ const clickEmoteIfThresholdMet = (emoteUrl, difference, emoteName) => {
         const firstChildInnerHTML = elements[i].childNodes[0].innerHTML;
 
         if (firstChildInnerHTML.includes(emoteUrl)) {
-            if (difference > 3) {
+            if (difference > 4) {
                 elements[i].click();
                 //console.log(`Clicked on ${emoteName} emote.`);
             }
@@ -93,8 +93,8 @@ handleEmote4();
 handleEmote5();
 
 // Set intervals for continuous counting and processing
-setInterval(handleEmote1, 5000);
-setInterval(handleEmote2, 5000);
-setInterval(handleEmote3, 5000);
-setInterval(handleEmote4, 5000);
-setInterval(handleEmote5, 5000);
+setInterval(handleEmote1, 7000);
+setInterval(handleEmote2, 7000);
+setInterval(handleEmote3, 7000);
+setInterval(handleEmote4, 7000);
+setInterval(handleEmote5, 7000);
